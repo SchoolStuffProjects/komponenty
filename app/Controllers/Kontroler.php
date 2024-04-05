@@ -28,4 +28,9 @@ class Kontroler extends BaseController
         $data['komponentDanehoTypu'] = $this->komponentDanehoTypu->where('typKomponent_id', $typKomponent_id)->findAll();
         return view ('VypisKomponentDanehoTypu', $data);
     }
+
+    public function loadParametersOfComponents($id){
+        $data['parametryKomponentu'] = $this->komponentDanehoTypu->join('vyrobce', 'vyrobce.idVyrobce = komponent.vyrobce_id', 'inner')->findAll($id);
+        return view ('parametryKomponentu', $data);
+    }
 }
