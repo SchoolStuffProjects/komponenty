@@ -1,7 +1,7 @@
 <?=$this->extend("layout/template");?>
 
 <?=$this->section("content");?>
-<h1>Přehled typů komopnentů</h1>
+<h1>Přehled typů komponentů</h1>
 <div class = "row"> 
     <?php
         foreach ($typKomponentu as $row){  

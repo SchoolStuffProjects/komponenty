@@ -30,7 +30,8 @@ class Kontroler extends BaseController
     }
 
     public function loadParametersOfComponents($id){
-        $data['parametryKomponentu'] = $this->komponentDanehoTypu->join('vyrobce', 'vyrobce.idVyrobce = komponent.vyrobce_id', 'inner')->findAll($id);
+        $data['komponentDanehoTypu'] = $this->komponentDanehoTypu->join('vyrobce', 'vyrobce.idVyrobce = komponent.vyrobce_id', 'inner')
+        ->join('parametr', 'parametr.komponent_id = komponent.id', 'inner')->join('nazevparametr', 'nazevparametr.id = parametr.nazevParametr_id', 'inner')->find($id);
         return view ('parametryKomponentu', $data);
     }
 }
