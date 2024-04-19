@@ -20,6 +20,7 @@
             </div>
         </div>
     <?php } ?>
+    <p class="text-center"> <?= $pager->links(); //naučit se tohle vycentrovat?> </p> 
 </div>
 
 <?=$this->endSection();?>

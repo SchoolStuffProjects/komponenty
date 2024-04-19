@@ -19,7 +19,6 @@
                 <p>Odkaz: <a href="<?= $komponentDanehoTypu->odkaz ?>" target="_blank"><?= $komponentDanehoTypu->odkaz ?> </a></p>
                 <p>Výrobce: <?= $komponentDanehoTypu->vyrobce ?></p>
                 <?php 
-                
                 foreach($parametrDanehoKomponentu as $row){
                   echo' <p>'. $row->nazevParametru.': '. $row->hodnota .'</p>';
                 }

@@ -25,7 +25,8 @@ class Kontroler extends BaseController
     }
 
     public function loadComponentsOfCertainType($typKomponent_id){
-        $data['komponentDanehoTypu'] = $this->komponentDanehoTypu->where('typKomponent_id', $typKomponent_id)->findAll();
+        $data['komponentDanehoTypu'] = $this->komponentDanehoTypu->where('typKomponent_id', $typKomponent_id)->paginate(4);
+        $data ['pager'] = $this->komponentDanehoTypu->pager;
         return view ('VypisKomponentDanehoTypu', $data);
     }
 
