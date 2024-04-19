@@ -16,7 +16,7 @@
             <div class="card-body">
                 <h1 class="text-center"><?= $komponentDanehoTypu->nazev ?></h1>
                 <?= img($imgKomponent); ?>
-                <p>Odkaz: <?= $komponentDanehoTypu->odkaz ?></p>
+                <p>Odkaz: <a href="<?= $komponentDanehoTypu->odkaz ?>" target="_blank"><?= $komponentDanehoTypu->odkaz ?> </a></p>
                 <p>Výrobce: <?= $komponentDanehoTypu->vyrobce ?></p>
                 <p><?= $komponentDanehoTypu->nazevParametru,': ', $komponentDanehoTypu->hodnota ?></p>
             </div>
