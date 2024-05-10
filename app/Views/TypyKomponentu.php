@@ -10,7 +10,7 @@
                 <div class="card m-5">
                 <h1 class="text-center"><?= $row->typKomponent ?></h1>
                 <div class="card-body">
-                    <p class="card-title text-center"><?= anchor('VypisKomponetDanehoTypu/'.$row->idKomponent, $row->url) ?><p>
+                    <p class="card-title text-center"><?= anchor('VypisKomponetDanehoTypu/'.$row->url, $row->url) ?><p>
                 </div>
             </div>
         </div>

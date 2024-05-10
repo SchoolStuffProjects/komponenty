@@ -20,7 +20,11 @@
             </div>
         </div>
     <?php } ?>
-    <p class="text-center"> <?= $pager->links(); //naučit se tohle vycentrovat?> </p> 
+    <footer>
+        <div class="d-flex">
+            <div class="mx-auto text-center pagination a"> <?= $pager->links(); ?> </div>
+        </div>
+    </footer>
 </div>
 
 <?=$this->endSection();?>

@@ -7,6 +7,6 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Kontroler::loadTypesOfComponents');
 
-$routes->get('VypisKomponetDanehoTypu/(:num)', 'Kontroler::loadComponentsOfCertainType/$1');
+$routes->get('VypisKomponetDanehoTypu/(:any)', 'Kontroler::loadComponentsOfCertainType/$1');
 
 $routes->get('parametryKomponentu/(:num)', 'Kontroler::loadParametersOfComponents/$1');
