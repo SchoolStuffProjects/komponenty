@@ -40,4 +40,9 @@ class Kontroler extends BaseController
         ->where('komponent_id', $id)->findAll();
         return view ('Parameters', $data);
     }
+
+    public function addCategory(){
+        $data['newCategory'] = "nová kategorie";
+        echo view('NewCategory', $data);
+    }
 }
