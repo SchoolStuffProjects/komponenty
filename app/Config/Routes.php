@@ -5,8 +5,8 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Kontroler::loadTypesOfComponents');
+$routes->get('/', 'Kontroler::loadCategories');
 
-$routes->get('VypisKomponetDanehoTypu/(:any)', 'Kontroler::loadComponentsOfCertainType/$1');
+$routes->get('Components/(:any)', 'Kontroler::loadComponents/$1');
 
-$routes->get('parametryKomponentu/(:num)', 'Kontroler::loadParametersOfComponents/$1');
+$routes->get('Parameters/(:num)', 'Kontroler::loadParameters/$1');

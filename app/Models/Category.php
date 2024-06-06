@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class TypKomponentu extends Model
+class Category extends Model
 {
     protected $table            = 'typkomponent';
     protected $primaryKey       = 'idKomponent';

@@ -6,7 +6,7 @@
 <?php
     $cesta_pic = 'komponenty_assets/komponenty/';
     $imgKomponent = [
-        'src' => $cesta_pic.$komponentDanehoTypu->pic,
+        'src' => $cesta_pic.$Component->pic,
         'width' => '7.5%'
         ];
 
@@ -14,12 +14,12 @@
     <div class="col-12, text-center">
         <div class="card m-5">
             <div class="card-body">
-                <h1 class="text-center"><?= $komponentDanehoTypu->nazev ?></h1>
+                <h1 class="text-center"><?= $Component->nazev ?></h1>
                 <?= img($imgKomponent); ?>
-                <p>Odkaz: <a href="<?= $komponentDanehoTypu->odkaz ?>" target="_blank"><?= $komponentDanehoTypu->odkaz ?> </a></p>
-                <p>Výrobce: <?= $komponentDanehoTypu->vyrobce ?></p>
+                <p>Odkaz: <a href="<?= $Component->odkaz ?>" target="_blank"><?= $Component->odkaz ?> </a></p>
+                <p>Výrobce: <?= $Component->vyrobce ?></p>
                 <?php 
-                foreach($parametrDanehoKomponentu as $row){
+                foreach($Parameter as $row){
                   echo' <p>'. $row->nazevParametru.': '. $row->hodnota .'</p>';
                 }
                 ?>
