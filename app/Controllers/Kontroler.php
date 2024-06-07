@@ -42,7 +42,19 @@ class Kontroler extends BaseController
     }
 
     public function addCategory(){
-        $data['newCategory'] = "nová kategorie";
-        echo view('NewCategory', $data);
+        return view('addCategory');
+    }
+
+    public function createCategory(){
+        $categoryName = $this->request->getPost('category_name');
+    
+        $data = [
+            'idKomponent' => '',
+            'typKomponent' => $categoryName,
+            'url' => ''
+        ];
+        
+        $this->Category->save($data);
+        return redirect()->route('/');
     }
 }

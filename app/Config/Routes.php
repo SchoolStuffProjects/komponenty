@@ -11,4 +11,5 @@ $routes->get('Components/(:any)', 'Kontroler::loadComponents/$1');
 
 $routes->get('Parameters/(:num)', 'Kontroler::loadParameters/$1');
 
-$routes->get('NewCategory/', 'Kontroler::addCategory');
+$routes->get('/addCategory', 'Kontroler::addCategory');
+$routes->post('/addCategory', 'Kontroler::createCategory');
